@@ -1,0 +1,87 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+h1{
+	font-size: 40px;
+	line-height: 50px;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	color: #7ea2b3;
+}
+h2{
+	font-size: 24px;
+	line-height: 30px;
+	font-family: 'Oswald', sans-serif;
+	color: #7ea2b3;
+}
+img{
+	display: inline-block;
+	vertical-align: center;
+	max-width: 100%;
+}
+.button{
+	font-size: 13px;
+	line-height: 22px;
+	font-family: 'Dosis', sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #97b621;
+	border-radius: 20px;
+	padding: 0.5em 4em;
+	text-decoration: none;
+	display: inline-block;
+	align-self: center;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+	min-height: 100vh;
+	text-align: center;
+}
+.card-list{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 3em;
+}
+.card{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-items: center;
+	padding: 1em;
+}
+.card-img{
+	position: relative;
+}
+.text-hover{
+	position: absolute;
+	max-width: 100%;
+	padding: 20% 0 ;
+	color: #fff;
+	font-family: 'Dosis', sans-serif;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	margin-bottom: 5px;
+	overflow: hidden;
+	background: rgba(21,51,68,0.6);
+	display: none;
+}
+.card-img:hover .text-hover{
+	display: block;
+}
+footer{
+	background-color: #f6fcff;
+}
+@media (min-width: 320px) and (max-width: 767px){
+	.card-list{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+}

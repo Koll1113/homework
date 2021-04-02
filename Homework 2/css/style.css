@@ -1,0 +1,51 @@
+blockquote{
+    color: green;
+}
+
+a[href*="http"] {
+    color:red;
+}
+
+li:nth-child(4){
+    background-color: green;
+    display: inline;
+}
+
+ul + p{   
+     font-size: 26px;
+}
+
+h3:first-child{
+    color: pink;
+}
+
+#greycol{
+    color: gray;
+}
+
+.text-box div p{
+    color: red;
+}
+
+.text-box p:nth-last-child(2){
+    color: green;
+}
+
+
+
+.yellow{
+    color: yellow;
+}
+
+.bg-box{
+    display: flex;
+    width: 100%;
+	height: 100vh;
+    background-color: green;
+    background-image: url("../img/lamp-png-0.png"), url("..//img/grass-png.png"),
+    url("../img/Ёжик.png"), url("../img/donut.png"),
+    url("../img/pole-zelen-trava-dom-derevya.jpg");
+    background-position:top, bottom, left, right, center ;
+    background-repeat:repeat-x, repeat-x, repeat-y, repeat-y, no-repeat ;
+    background-size:65px auto,300px 250px, 40px 40px, 40px 40px,600px 400px;
+}

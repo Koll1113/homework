@@ -1,0 +1,238 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    text-align: center;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+img{
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+}
+header{
+    min-width: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    background-color: #d3b714;
+}
+.logo{
+    display: block;
+    width: 200px;
+}
+.main-nav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+#menu_toggle{
+    opacity: 0;
+}
+.main-nav > li{
+    display: block;
+    padding-left: 1em;
+}
+.main-nav > li > a{
+    text-decoration: none;
+    display: block;
+    color: #000;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 auto;
+}
+.main > p{
+    padding: 0 30px;
+}
+.main-card{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: calc(33.333% - 20px) ;
+    border: solid 2px #bdbdbd;
+    margin: 10px;
+    border-radius: 20px;
+    transition: background-color .5s ease,
+                color .5s ease,
+                transform .5s ease;
+}
+.card:hover{
+    background-color: #685174;
+    color: #fff;
+    transform: scale(1.3);
+    z-index: 1;
+}
+.btn{
+    margin-top: auto;
+    align-self: center;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 30px;
+    padding: 1px 10px;
+    margin-bottom: 10px;
+    background: #685174;
+    color: #fff;
+    transition: background-color .3s ease,
+                color .3s ease,
+                transform .3s ease;
+}
+.btn:hover{
+    background-color: #008900;
+    color: #000;
+    transform: scale(1.6);
+}
+.circle > img{
+    max-width: 32%;
+    border-radius: 50%;
+}
+.aside1{
+    order: -1;
+    width: 210px;
+    flex-shrink: 0;
+    background-color: #c798b9;
+}
+.aside2{
+    flex-shrink: 0;
+    width: 210px;
+    background-color: #9cb1c7;
+}
+footer{
+    flex: 0 0 auto;
+    background-color: #86ec86;
+}
+.holder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 20px;
+    border:3px solid;
+    border-radius: 20px 20px 0 0;
+}
+.item{
+    padding: 20px;
+    flex-grow: 1;
+}
+.item:first-child{
+    flex-basis: 50%;
+    flex-grow: 2;
+    flex-shrink: 0;
+    background: #fd644d;
+    order: -3;
+}
+.item:nth-child(2){
+    background: #58b;
+}
+.item:nth-child(3){
+    order: -1;
+    background: #639;
+}
+.item:nth-child(4){
+    background: #181;
+}
+.item:last-child{
+    flex-basis: 50%;
+    flex-grow: 2;
+    flex-shrink: 0;
+    background: #fda429;
+    order: -2;
+}
+@media (min-width: 320px) and (max-width: 767px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        order: -1;
+    }
+    .card{
+        width: 70%;
+    }
+    #menu_toggle{
+        opacity: 0;
+    }
+    .menu_btn{
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .menu_btn > span,
+    .menu_btn > span:before,
+    .menu_btn > span:after{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+    }
+    .menu_btn > span:before{
+        content: "";
+        top: -8px;
+    }
+    .menu_btn > span:after{
+        content: "";
+        top: 8px;
+    }
+    #menu_toggle:checked ~ .menu_btn > span{
+        transform: rotate(45deg);
+    }
+    #menu_toggle:checked ~ .menu_btn > span:before{
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu_toggle:checked ~ .menu_btn > span:after{
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu_toggle:checked ~ .main-nav{
+        visibility: visible;
+        right: 0;
+    }
+    .main-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        list-style: none;
+        visibility: hidden;
+        top: 0;
+        right: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #663797;
+    }
+    .main-nav > li{
+        display: block;
+        padding-top: 10%;
+        border-bottom: 2px solid #000;
+    }
+}
